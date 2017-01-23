@@ -20,10 +20,10 @@ def Banner():
 #OPTIONS
 def Options():
     cls()
-    print"""OPTIONS
-1)Day Mode
-2)Night mode
-99)Back"""
+    print"""OPCIONES
+1)Modo dia
+2)Modo nocturno
+99)Atras"""
     optionsChoice=(raw_input())
     if optionsChoice == "1":
         os.system("color F0")
@@ -41,20 +41,18 @@ def MainMenu():
     cls()
     Banner()
 
-    print """Welcome to advanced browser beta
-===========================
+    print """Bienvenido a Hispadox beta
+==========================
 1)Doxing
 2)Text
 3)Text
-4)Delete yourself
-5)Options
-99)Exit"""
+4)Text
+5)Opciones
+99)Salir"""
     mainMenuChoice=(raw_input())
 
     if mainMenuChoice == "1":
         DoxingMenu()
-    elif mainMenuChoice == "4":
-        DeleteYourselfMenu()
     elif mainMenuChoice == "5":
         Options()
     elif mainMenuChoice == "99":
@@ -64,9 +62,9 @@ def MainMenu():
 #DOXING
 def DoxingMenu():
     cls()
-    print """1)Search by username
-2)Search by name
-99)Back"""
+    print """1)Busqueda por usuario
+2)Busqueda por nombre
+99)Atras"""
     DoxingMenuChoice=(raw_input())
 
     if DoxingMenuChoice == "1":
@@ -81,8 +79,8 @@ def DoxingMenu():
 
 def SearchByUsername():
     cls()
-    print """Remember that some social networks doesent allow spaces
-Search username:"""
+    print """Recuerda que algunas redes sociales no aceptan espacios en los nombres de usuario
+Buscar por usuario:"""
     username=(raw_input(""))
     webbrowser.open('https://duckduckgo.com/' + username)
     webbrowser.open('http://knowem.com/checkusernames.php?u=' + username)
@@ -96,24 +94,14 @@ Search username:"""
 
 def SearchByName():
     cls()
-    print """Rembemer to use full names to find more accurate results"
-Search by name:"""
+    print """Recuerda que los nombres completos suelen dar resultados mas precisos
+Busqueda por nombre:"""
     name=(raw_input())
     webbrowser.open('https://duckduckgo.com/' + name)
     webbrowser.open('https://plus.google.com/s/' + name + '/top')
     webbrowser.open('https://www.facebook.com/public/' + name)
     webbrowser.open(happyHuntingImage)
-    MainMenu()
-
-#DELETING YOURSELF
-def DeleteYourselfMenu():
-    cls()
-    print "Delete me on:"
-    print """
-"""
-    deleteYorselfMenuChoice=float(raw_input())
-    MainMenu()
-    
+    MainMenu()   
 MainMenu()
 
 
